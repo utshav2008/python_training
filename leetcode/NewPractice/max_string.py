@@ -3,10 +3,11 @@ def find_max_string(s):
     max_length = 0
     string_set = set()
     for r in range(len(s)):
-        if s[r] in string_set:
-            
-             
-        
+        while s[r] in string_set:
+            l += 1
+            string_set.remove(s[l])
+        string_set.add(s[r])
+        max_length = max(max_length, r-l+1 )            
+    return max_length
 
-
-find_max_string('abcabbad')
+print(find_max_string('abcabbad'))
