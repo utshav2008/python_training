@@ -3,4 +3,5 @@ myDict = {'ravi': 10, 'rajnish': 9,
 
 
 sorted_dict = dict(sorted(myDict.items(), key = lambda x: x[0]))
-print(sorted_dict)
+for key, val in sorted_dict.items():
+    print(key, val)
